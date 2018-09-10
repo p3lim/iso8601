@@ -1,6 +1,6 @@
 # iso8601
 
-iso8601 is a simple Go package for formatting `time.Duration` according to the ISO 8601 format.
+iso8601 is a simple Go package for formatting `time.Duration` according to the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601#Durations).
 
 ```go
 package main
