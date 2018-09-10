@@ -75,5 +75,10 @@ func Format(d time.Duration) string {
 		str += fmt.Sprintf("%d%c", sec, runeSecond)
 	}
 
+	if len(str) == 1 {
+		// at least one element must be present, we'll use seconds
+		str += fmt.Sprintf("%c%d%c", runeTime, 0, runeSecond)
+	}
+
 	return str
 }
