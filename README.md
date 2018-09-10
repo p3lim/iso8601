@@ -14,7 +14,7 @@ import (
 
 func main() {
 	t := time.Now()
-	time.Sleep(5)
+	time.Sleep(5 * time.Second)
 	fmt.Println(iso8601.Format(time.Since(t)))
 }
 ```
