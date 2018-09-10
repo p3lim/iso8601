@@ -72,7 +72,7 @@ func Format(d time.Duration) string {
 	}
 
 	if sec >= 1 {
-		str += fmt.Sprintf("%d%c", sec, runeSecond)
+		str += fmt.Sprintf("%d%c", int(sec), runeSecond)
 	}
 
 	if len(str) == 1 {
