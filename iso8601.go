@@ -8,6 +8,7 @@ import (
 
 const (
 	runePrefix = 'P'
+	runeTime   = 'T'
 	runeYear   = 'Y'
 	runeMonth  = 'M'
 	runeWeek   = 'W'
@@ -51,6 +52,11 @@ func Format(d time.Duration) string {
 	if days >= 1 {
 		str += fmt.Sprintf("%d%c", days, runeDay)
 		sec -= float64(days * multDay)
+	}
+
+	if sec >= 1 {
+		// there's still time left, add the time designator
+		str += fmt.Sprintf("%c", runeTime)
 	}
 
 	hours := int(sec / multHour)
