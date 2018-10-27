@@ -10,6 +10,7 @@ func TestISO8601Format(t *testing.T) {
 		54321 * time.Hour:   "P6Y2M1W4D",
 		54321 * time.Minute: "P1M1WT6H51M",
 		54321 * time.Second: "PT15H5M21S",
+		0 * time.Second:     "PT0S",
 	}
 
 	for input, expected := range tests {
